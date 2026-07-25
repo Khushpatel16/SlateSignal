@@ -1,0 +1,136 @@
+{
+  "best_parameters": {
+    "learning_rate": 0.04,
+    "max_depth": 4,
+    "min_child_weight": 8,
+    "n_estimators": 74
+  },
+  "conformal_log_radius": {
+    "blockbuster": 1.90687561,
+    "global": 1.90687561,
+    "high": 1.54112053,
+    "low": 2.48219204,
+    "micro": 1.90687561,
+    "mid": 1.72617531
+  },
+  "cpi_source": {
+    "projection_after_latest_observation": "2.4% annual, labeled assumption",
+    "provider": "Federal Reserve Bank of St. Louis / U.S. BLS",
+    "series": "CPIAUCSL"
+  },
+  "display_name": "Corrected time-frozen BERT + structured candidate",
+  "encoder": {
+    "hidden_size": 768,
+    "max_length": 512,
+    "name": "bert-base-uncased",
+    "pooling": "attention-mask-aware mean pooling"
+  },
+  "evaluation": {
+    "2024_validation": {
+      "corrected": {
+        "log_mae": 1.342213,
+        "mae_usd": 104217968.44,
+        "r2": 0.283388
+      },
+      "original": {
+        "log_mae": 1.437478,
+        "mae_usd": 111148192.12,
+        "r2": 0.1534
+      }
+    },
+    "2025_closed_holdout": {
+      "corrected": {
+        "log_mae": 1.428473,
+        "mae_usd": 112402459.18,
+        "r2": 0.009198
+      },
+      "films": 24,
+      "interval_coverage": 0.666667,
+      "original": {
+        "log_mae": 1.621623,
+        "mae_usd": 115030680.05,
+        "r2": -0.034616
+      }
+    }
+  },
+  "feature_count": 825,
+  "limitations": [
+    "The research corpus is popularity-selected rather than a theatrical census.",
+    "Historical premium-format, distribution-scale, and pre-release buzz fields are absent.",
+    "Secondary box-office targets await source-complete training labels.",
+    "Franchise status uses a reproducible title-derived proxy in this candidate."
+  ],
+  "model_kind": "bert_mean_pool_xgboost_corrected",
+  "model_sha256": "5121b03fe0b8e89cd70eaed640e7af9689c8e7bfb6436b3397342b93195705dc",
+  "promoted": false,
+  "promotion_gates": {
+    "audited_group_error_not_worse": false,
+    "coverage_between_75_and_85_percent": false,
+    "dollar_mae_within_5_percent": true,
+    "improves_temporal_log_mae": true
+  },
+  "promotion_note": "Promotion is blocked until a Wikidata-backed matched-cohort fairness audit has enough representation.",
+  "schema_version": 1,
+  "structured_features": [
+    "log_budget_real_2025",
+    "budget_missing",
+    "release_year_centered",
+    "director_avg_revenue_log",
+    "director_num_films",
+    "director_max_revenue_log",
+    "director_missing",
+    "cast_avg_revenue_log",
+    "cast_num_films",
+    "cast_max_revenue_log",
+    "cast_missing",
+    "studio_avg_revenue_log",
+    "studio_num_films",
+    "studio_max_revenue_log",
+    "studio_missing",
+    "release_month_sin",
+    "release_month_cos",
+    "release_month_missing",
+    "holiday_window",
+    "nearby_competition",
+    "competition_missing",
+    "runtime_scaled",
+    "runtime_missing",
+    "franchise_ip",
+    "sequel_number",
+    "certification_G",
+    "certification_PG",
+    "certification_PG-13",
+    "certification_R",
+    "certification_OTHER",
+    "certification_missing",
+    "genre_Action",
+    "genre_Animation",
+    "genre_Comedy",
+    "genre_Drama",
+    "genre_Fantasy",
+    "genre_Horror",
+    "genre_Other",
+    "genre_Romance",
+    "genre_SciFi",
+    "genre_Thriller",
+    "distribution_scale",
+    "distribution_scale_missing",
+    "premium_format_count",
+    "premium_formats_missing",
+    "english_language",
+    "language_missing",
+    "producer_writer_history",
+    "producer_writer_missing",
+    "google_momentum",
+    "google_missing",
+    "wikipedia_attention",
+    "wikipedia_missing",
+    "trailer_momentum",
+    "trailer_missing",
+    "news_reddit_attention",
+    "news_reddit_missing"
+  ],
+  "target": "log1p_worldwide_gross_real_2025_usd",
+  "training_cutoff": "2023-12-31",
+  "version": "multimodal-xgb-v2"
+}

@@ -1,0 +1,14 @@
+{
+  "max_absolute_embedding_delta": 0.004868030548095703,
+  "max_downstream_prediction_delta_usd": 0.0,
+  "max_downstream_prediction_relative_delta": 0.0,
+  "max_embedding_rmse": 0.00046507714432664216,
+  "max_length": 512,
+  "min_embedding_cosine_similarity": 0.9999992251396179,
+  "model": "bert-base-uncased",
+  "onnx_path": "services/inference/artifacts/bert-base-uncased-fp16.onnx",
+  "onnx_sha256": "6a7634a709d6faa48b91c4491690d76bf0133f93b77662d38a4c87d45d407945",
+  "pooling": "attention-mask-aware mean pooling",
+  "quantization": "float16 weights and activations with float32 I/O",
+  "samples": 3
+}

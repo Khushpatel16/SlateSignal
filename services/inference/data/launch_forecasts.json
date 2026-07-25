@@ -1,0 +1,1498 @@
+{
+  "purpose": "portable_precomputed_launch_forecasts",
+  "rows": [
+    {
+      "buzz": [],
+      "comparables": [
+        {
+          "actual_worldwide": 100498764.0,
+          "movie_id": "ac9c91d1-aa04-42b6-ac53-8b17e2ab41df",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2024,
+          "similarity": 0.7706,
+          "slug": "madame-web-2024-11057302",
+          "title": "Madame Web"
+        },
+        {
+          "actual_worldwide": 104272136.0,
+          "movie_id": "259a5e42-cd9e-4c12-90e7-fdb60dd3638d",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2023,
+          "similarity": 0.7706,
+          "slug": "the-creator-2023-11858890",
+          "title": "The Creator"
+        },
+        {
+          "actual_worldwide": 60730568.0,
+          "movie_id": "d728163b-9262-45a5-935a-63d57722511e",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2023,
+          "similarity": 0.7253,
+          "slug": "65-2023-12261776",
+          "title": "65"
+        },
+        {
+          "actual_worldwide": 379751655.0,
+          "movie_id": "4f0f92ac-f240-4f07-ba66-e904706e8b68",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2021,
+          "similarity": 0.72,
+          "slug": "black-widow-2021-3480822",
+          "title": "Black Widow"
+        },
+        {
+          "actual_worldwide": 402240065.0,
+          "movie_id": "e44bbb24-febe-4ba2-a70e-97647dee20dd",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2025,
+          "similarity": 0.72,
+          "slug": "captain-america-brave-new-world-2025-14513804",
+          "title": "Captain America: Brave New World"
+        }
+      ],
+      "confidence_score": 0.3244816294805746,
+      "data_cutoff": "2026-07-24T12:00:00",
+      "factors": [
+        {
+          "direction": "negative",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": -16385112.46,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "title-only fallback"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": 405477819.04,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$68,000,000 (model imputed)"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": -1815853.01,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "Action, Adventure, Science Fiction"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Average, maximum, and count use the pre-2024 training history.",
+          "group": "People",
+          "impact": 64402890.5,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Anthony Russo; 5 prior films"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Only release decade, not month, is represented in this baseline.",
+          "group": "Release",
+          "impact": -36581243.5,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "December"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Displayed as context; not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 1,
+          "value": "1 confirmed films within 7 days"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 1,
+          "value": "US / en"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; no hand-authored multiplier is applied.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Only approved, timestamped aggregates are eligible.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        }
+      ],
+      "fairness": {
+        "audit_status": "watch",
+        "cohort_definition": "Matched release year, genre, and budget cohorts with bootstrap confidence intervals; evaluation only.",
+        "evaluation_only_attributes": [
+          "gender annotations from Wikidata"
+        ],
+        "notes": [
+          "Protected attributes are excluded from model inputs.",
+          "Director history can carry opportunity-related proxy bias.",
+          "The original binary name-based gender analysis is not used here."
+        ],
+        "protected_attributes_used": false
+      },
+      "feature_manifest_hash": "e3b12dbdbda0b921af59787728bbaecb56eea693f7176f284f1eec1df28a7805",
+      "forecast_type": "official",
+      "generated_at": "2026-07-25T04:34:09.030656",
+      "horizon_days": 147,
+      "limitations": [
+        "Original training rows were selected by post-release popularity and are not a census.",
+        "Nominal historical dollars were not inflation-normalized in this baseline.",
+        "Training-time structured rows and embeddings require a corrected successor audit.",
+        "Only worldwide gross is supported; secondary targets remain unavailable.",
+        "Buzz is not an input to this baseline and no hand-authored social multiplier is used.",
+        "Secondary revenue targets are unavailable for this baseline.",
+        "Synopsis was unavailable; the title alone was encoded and uncertainty was retained.",
+        "Production budget was model-imputed at $68,000,000 from pre-cutoff genre comparables.",
+        "15 of 20 production factors are not inputs to bert-xgb-v1."
+      ],
+      "model_version": "bert-xgb-v1",
+      "movie": {
+        "release_year": 2026,
+        "slug": "avengers-doomsday-2026",
+        "title": "Avengers: Doomsday"
+      },
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 11965581.79,
+          "p50": 85840505.47,
+          "p90": 615815599.22
+        }
+      }
+    },
+    {
+      "buzz": [],
+      "comparables": [
+        {
+          "actual_worldwide": 100498764.0,
+          "movie_id": "ac9c91d1-aa04-42b6-ac53-8b17e2ab41df",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2024,
+          "similarity": 0.7706,
+          "slug": "madame-web-2024-11057302",
+          "title": "Madame Web"
+        },
+        {
+          "actual_worldwide": 104272136.0,
+          "movie_id": "259a5e42-cd9e-4c12-90e7-fdb60dd3638d",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2023,
+          "similarity": 0.7706,
+          "slug": "the-creator-2023-11858890",
+          "title": "The Creator"
+        },
+        {
+          "actual_worldwide": 60730568.0,
+          "movie_id": "d728163b-9262-45a5-935a-63d57722511e",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2023,
+          "similarity": 0.7253,
+          "slug": "65-2023-12261776",
+          "title": "65"
+        },
+        {
+          "actual_worldwide": 379751655.0,
+          "movie_id": "4f0f92ac-f240-4f07-ba66-e904706e8b68",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2021,
+          "similarity": 0.72,
+          "slug": "black-widow-2021-3480822",
+          "title": "Black Widow"
+        },
+        {
+          "actual_worldwide": 402240065.0,
+          "movie_id": "e44bbb24-febe-4ba2-a70e-97647dee20dd",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2025,
+          "similarity": 0.72,
+          "slug": "captain-america-brave-new-world-2025-14513804",
+          "title": "Captain America: Brave New World"
+        }
+      ],
+      "confidence_score": 0.32448162908394396,
+      "data_cutoff": "2026-07-24T12:00:00",
+      "factors": [
+        {
+          "direction": "negative",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": -14502118.35,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "title-only fallback"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": 236166343.63,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$68,000,000 (model imputed)"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": -1203458.71,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "Action, Adventure, Science Fiction"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Average, maximum, and count use the pre-2024 training history.",
+          "group": "People",
+          "impact": 46223350.42,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Anthony Russo; 5 prior films"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Only release decade, not month, is represented in this baseline.",
+          "group": "Release",
+          "impact": -31296377.36,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "December"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Displayed as context; not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 1,
+          "value": "0 confirmed films within 7 days"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 1,
+          "value": "US / en"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; no hand-authored multiplier is applied.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Only approved, timestamped aggregates are eligible.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        }
+      ],
+      "fairness": {
+        "audit_status": "watch",
+        "cohort_definition": "Matched release year, genre, and budget cohorts with bootstrap confidence intervals; evaluation only.",
+        "evaluation_only_attributes": [
+          "gender annotations from Wikidata"
+        ],
+        "notes": [
+          "Protected attributes are excluded from model inputs.",
+          "Director history can carry opportunity-related proxy bias.",
+          "The original binary name-based gender analysis is not used here."
+        ],
+        "protected_attributes_used": false
+      },
+      "feature_manifest_hash": "e3b12dbdbda0b921af59787728bbaecb56eea693f7176f284f1eec1df28a7805",
+      "forecast_type": "official",
+      "generated_at": "2026-07-25T04:34:09.328605",
+      "horizon_days": 511,
+      "limitations": [
+        "Original training rows were selected by post-release popularity and are not a census.",
+        "Nominal historical dollars were not inflation-normalized in this baseline.",
+        "Training-time structured rows and embeddings require a corrected successor audit.",
+        "Only worldwide gross is supported; secondary targets remain unavailable.",
+        "Buzz is not an input to this baseline and no hand-authored social multiplier is used.",
+        "Secondary revenue targets are unavailable for this baseline.",
+        "Synopsis was unavailable; the title alone was encoded and uncertainty was retained.",
+        "Production budget was model-imputed at $68,000,000 from pre-cutoff genre comparables.",
+        "15 of 20 production factors are not inputs to bert-xgb-v1."
+      ],
+      "model_version": "bert-xgb-v1",
+      "movie": {
+        "release_year": 2027,
+        "slug": "avengers-secret-wars-2027",
+        "title": "Avengers: Secret Wars"
+      },
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 9046577.33,
+          "p50": 64899710.04,
+          "p90": 465587355.74
+        }
+      }
+    },
+    {
+      "buzz": [],
+      "comparables": [
+        {
+          "actual_worldwide": 40856831.0,
+          "movie_id": "5f329ebb-fed8-43f3-8b82-933b6577da14",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2024,
+          "similarity": 0.613,
+          "slug": "arthur-the-king-2024-10720352",
+          "title": "Arthur the King"
+        },
+        {
+          "actual_worldwide": 4551565.0,
+          "movie_id": "f199659d-e5fd-47e6-93be-f64c6370b5a4",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2022,
+          "similarity": 0.605,
+          "slug": "crimes-of-the-future-2022-14549466",
+          "title": "Crimes of the Future"
+        },
+        {
+          "actual_worldwide": 6986177.0,
+          "movie_id": "dc823b7b-3c3c-4e07-9d34-33f22ff2fc34",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2023,
+          "similarity": 0.572,
+          "slug": "knights-of-the-zodiac-2023-6528290",
+          "title": "Knights of the Zodiac"
+        },
+        {
+          "actual_worldwide": 7361414.0,
+          "movie_id": "dae7cf4f-77fd-4815-bd05-8b1563f9c54b",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2024,
+          "similarity": 0.5435,
+          "slug": "devara-part-1-2024-11821912",
+          "title": "Devara Part 1"
+        },
+        {
+          "actual_worldwide": 859208836.0,
+          "movie_id": "6a9a4efe-5d5a-4249-a163-2ee5d8c645cb",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2022,
+          "similarity": 0.54,
+          "slug": "black-panther-wakanda-forever-2022-9114286",
+          "title": "Black Panther: Wakanda Forever"
+        }
+      ],
+      "confidence_score": 0.4244816272314719,
+      "data_cutoff": "2026-07-24T12:00:00",
+      "factors": [
+        {
+          "direction": "negative",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": -8994189.67,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 2,
+          "value": "mean-pooled BERT, 768 dimensions"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": 73845880.49,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 2,
+          "value": "$40,000,000 (model imputed)"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": 396125.49,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 2,
+          "value": "Science Fiction, Adventure, Drama"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Average, maximum, and count use the pre-2024 training history.",
+          "group": "People",
+          "impact": 11755508.59,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 2,
+          "value": "Denis Villeneuve; 5 prior films"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Only release decade, not month, is represented in this baseline.",
+          "group": "Release",
+          "impact": -16699579.84,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 2,
+          "value": "December"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Displayed as context; not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 2,
+          "value": "1 confirmed films within 7 days"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 2,
+          "value": "US / en"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; no hand-authored multiplier is applied.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 2,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 2,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 2,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Only approved, timestamped aggregates are eligible.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 2,
+          "value": "unavailable at cutoff"
+        }
+      ],
+      "fairness": {
+        "audit_status": "watch",
+        "cohort_definition": "Matched release year, genre, and budget cohorts with bootstrap confidence intervals; evaluation only.",
+        "evaluation_only_attributes": [
+          "gender annotations from Wikidata"
+        ],
+        "notes": [
+          "Protected attributes are excluded from model inputs.",
+          "Director history can carry opportunity-related proxy bias.",
+          "The original binary name-based gender analysis is not used here."
+        ],
+        "protected_attributes_used": false
+      },
+      "feature_manifest_hash": "e3b12dbdbda0b921af59787728bbaecb56eea693f7176f284f1eec1df28a7805",
+      "forecast_type": "official",
+      "generated_at": "2026-07-25T04:34:09.129037",
+      "horizon_days": 147,
+      "limitations": [
+        "Original training rows were selected by post-release popularity and are not a census.",
+        "Nominal historical dollars were not inflation-normalized in this baseline.",
+        "Training-time structured rows and embeddings require a corrected successor audit.",
+        "Only worldwide gross is supported; secondary targets remain unavailable.",
+        "Buzz is not an input to this baseline and no hand-authored social multiplier is used.",
+        "Secondary revenue targets are unavailable for this baseline.",
+        "Production budget was model-imputed at $40,000,000 from pre-cutoff genre comparables.",
+        "15 of 20 production factors are not inputs to bert-xgb-v1."
+      ],
+      "model_version": "bert-xgb-v1",
+      "movie": {
+        "release_year": 2026,
+        "slug": "dune-part-three-2026",
+        "title": "Dune: Part Three"
+      },
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 4228608.84,
+          "p50": 30335839.42,
+          "p90": 217627836.31
+        }
+      }
+    },
+    {
+      "buzz": [],
+      "comparables": [
+        {
+          "actual_worldwide": 181935518.0,
+          "movie_id": "958d6609-8bd5-4014-bd91-7ccb2e214200",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2023,
+          "similarity": 0.82,
+          "slug": "teenage-mutant-ninja-turtles-mutant-mayhem-2023-8589698",
+          "title": "Teenage Mutant Ninja Turtles: Mutant Mayhem"
+        },
+        {
+          "actual_worldwide": 623190.0,
+          "movie_id": "4b800561-f42a-4c0c-97ea-239b559dc038",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2022,
+          "similarity": 0.712,
+          "slug": "chip-n-dale-rescue-rangers-2022-3513500",
+          "title": "Chip 'n Dale: Rescue Rangers"
+        },
+        {
+          "actual_worldwide": 129408392.0,
+          "movie_id": "9da42a8c-65a0-420e-94cc-f64d153f3b67",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2024,
+          "similarity": 0.692,
+          "slug": "transformers-one-2024-8864596",
+          "title": "Transformers One"
+        },
+        {
+          "actual_worldwide": 1894228898.0,
+          "movie_id": "c5a4637e-0560-4f49-bb3a-4ea3211516f5",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2025,
+          "similarity": 0.672,
+          "slug": "ne-zha-2-2025-34956443",
+          "title": "Ne Zha 2"
+        },
+        {
+          "actual_worldwide": 547689492.0,
+          "movie_id": "0c330cb1-c3a4-4b08-81e3-38db02088cd3",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2024,
+          "similarity": 0.652,
+          "slug": "kung-fu-panda-4-2024-21692408",
+          "title": "Kung Fu Panda 4"
+        }
+      ],
+      "confidence_score": 0.42448162906151554,
+      "data_cutoff": "2026-07-24T12:00:00",
+      "factors": [
+        {
+          "direction": "negative",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": -12895917.63,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "mean-pooled BERT, 768 dimensions"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": 289332516.89,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$70,000,000 (model imputed)"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": -688091.69,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "Animation, Action, Adventure"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Average, maximum, and count use the pre-2024 training history.",
+          "group": "People",
+          "impact": 34033116.85,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Bob Persichetti; 1 prior films"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Only release decade, not month, is represented in this baseline.",
+          "group": "Release",
+          "impact": -29331421.19,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "June"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Displayed as context; not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 1,
+          "value": "0 confirmed films within 7 days"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 1,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 1,
+          "value": "US / en"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; no hand-authored multiplier is applied.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Only approved, timestamped aggregates are eligible.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 1,
+          "value": "unavailable at cutoff"
+        }
+      ],
+      "fairness": {
+        "audit_status": "watch",
+        "cohort_definition": "Matched release year, genre, and budget cohorts with bootstrap confidence intervals; evaluation only.",
+        "evaluation_only_attributes": [
+          "gender annotations from Wikidata"
+        ],
+        "notes": [
+          "Protected attributes are excluded from model inputs.",
+          "Director history can carry opportunity-related proxy bias.",
+          "The original binary name-based gender analysis is not used here."
+        ],
+        "protected_attributes_used": false
+      },
+      "feature_manifest_hash": "e3b12dbdbda0b921af59787728bbaecb56eea693f7176f284f1eec1df28a7805",
+      "forecast_type": "official",
+      "generated_at": "2026-07-25T04:34:09.229294",
+      "horizon_days": 329,
+      "limitations": [
+        "Original training rows were selected by post-release popularity and are not a census.",
+        "Nominal historical dollars were not inflation-normalized in this baseline.",
+        "Training-time structured rows and embeddings require a corrected successor audit.",
+        "Only worldwide gross is supported; secondary targets remain unavailable.",
+        "Buzz is not an input to this baseline and no hand-authored social multiplier is used.",
+        "Secondary revenue targets are unavailable for this baseline.",
+        "Production budget was model-imputed at $70,000,000 from pre-cutoff genre comparables.",
+        "15 of 20 production factors are not inputs to bert-xgb-v1."
+      ],
+      "model_version": "bert-xgb-v1",
+      "movie": {
+        "release_year": 2027,
+        "slug": "spider-man-beyond-the-spider-verse-2027",
+        "title": "Spider-Man: Beyond the Spider-Verse"
+      },
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 8923479.99,
+          "p50": 64016615.73,
+          "p90": 459252080.31
+        }
+      }
+    },
+    {
+      "buzz": [],
+      "comparables": [
+        {
+          "actual_worldwide": 100498764.0,
+          "movie_id": "ac9c91d1-aa04-42b6-ac53-8b17e2ab41df",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2024,
+          "similarity": 0.7706,
+          "slug": "madame-web-2024-11057302",
+          "title": "Madame Web"
+        },
+        {
+          "actual_worldwide": 104272136.0,
+          "movie_id": "259a5e42-cd9e-4c12-90e7-fdb60dd3638d",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2023,
+          "similarity": 0.7706,
+          "slug": "the-creator-2023-11858890",
+          "title": "The Creator"
+        },
+        {
+          "actual_worldwide": 60730568.0,
+          "movie_id": "d728163b-9262-45a5-935a-63d57722511e",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2023,
+          "similarity": 0.7253,
+          "slug": "65-2023-12261776",
+          "title": "65"
+        },
+        {
+          "actual_worldwide": 379751655.0,
+          "movie_id": "4f0f92ac-f240-4f07-ba66-e904706e8b68",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2021,
+          "similarity": 0.72,
+          "slug": "black-widow-2021-3480822",
+          "title": "Black Widow"
+        },
+        {
+          "actual_worldwide": 402240065.0,
+          "movie_id": "e44bbb24-febe-4ba2-a70e-97647dee20dd",
+          "reason": "Genre overlap and production-budget proximity.",
+          "release_year": 2025,
+          "similarity": 0.72,
+          "slug": "captain-america-brave-new-world-2025-14513804",
+          "title": "Captain America: Brave New World"
+        }
+      ],
+      "confidence_score": 0.4244816282211175,
+      "data_cutoff": "2026-07-24T12:00:00",
+      "factors": [
+        {
+          "direction": "negative",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": -3000069.43,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 2,
+          "value": "mean-pooled BERT, 768 dimensions"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": 195338731.24,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 2,
+          "value": "$68,000,000 (model imputed)"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": -826555.83,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 2,
+          "value": "Action, Adventure, Science Fiction"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "positive",
+          "evidence": "Average, maximum, and count use the pre-2024 training history.",
+          "group": "People",
+          "impact": 9269883.47,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 2,
+          "value": "Destin Daniel Cretton; 3 prior films"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "negative",
+          "evidence": "Only release decade, not month, is represented in this baseline.",
+          "group": "Release",
+          "impact": -23007911.17,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 2,
+          "value": "July"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Displayed as context; not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 2,
+          "value": "0 confirmed films within 7 days"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 2,
+          "value": "unavailable"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not an input to bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 2,
+          "value": "US / en"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; no hand-authored multiplier is applied.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 2,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 2,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Timestamped for successor models; not scored by this baseline.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 2,
+          "value": "unavailable at cutoff"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Only approved, timestamped aggregates are eligible.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 2,
+          "value": "unavailable at cutoff"
+        }
+      ],
+      "fairness": {
+        "audit_status": "watch",
+        "cohort_definition": "Matched release year, genre, and budget cohorts with bootstrap confidence intervals; evaluation only.",
+        "evaluation_only_attributes": [
+          "gender annotations from Wikidata"
+        ],
+        "notes": [
+          "Protected attributes are excluded from model inputs.",
+          "Director history can carry opportunity-related proxy bias.",
+          "The original binary name-based gender analysis is not used here."
+        ],
+        "protected_attributes_used": false
+      },
+      "feature_manifest_hash": "e3b12dbdbda0b921af59787728bbaecb56eea693f7176f284f1eec1df28a7805",
+      "forecast_type": "official",
+      "generated_at": "2026-07-25T04:34:08.927808",
+      "horizon_days": 7,
+      "limitations": [
+        "Original training rows were selected by post-release popularity and are not a census.",
+        "Nominal historical dollars were not inflation-normalized in this baseline.",
+        "Training-time structured rows and embeddings require a corrected successor audit.",
+        "Only worldwide gross is supported; secondary targets remain unavailable.",
+        "Buzz is not an input to this baseline and no hand-authored social multiplier is used.",
+        "Secondary revenue targets are unavailable for this baseline.",
+        "Production budget was model-imputed at $68,000,000 from pre-cutoff genre comparables.",
+        "15 of 20 production factors are not inputs to bert-xgb-v1."
+      ],
+      "model_version": "bert-xgb-v1",
+      "movie": {
+        "release_year": 2026,
+        "slug": "spider-man-brand-new-day-2026",
+        "title": "Spider-Man: Brand New Day"
+      },
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 5910143.03,
+          "p50": 42399083.55,
+          "p90": 304168960.41
+        }
+      }
+    }
+  ],
+  "schema_version": 1
+}

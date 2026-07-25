@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slatesignal-inference"
+version = "0.1.0"
+description = "Bias-aware box-office forecasting and greenlight optimization API."
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "alembic>=1.16,<2",
+  "email-validator>=2.2,<3",
+  "fastapi>=0.116,<1",
+  "httpx>=0.28,<1",
+  "orjson>=3.10,<4",
+  "pydantic-settings>=2.10,<3",
+  "psycopg[binary]>=3.2,<4",
+  "PyJWT>=2.10,<3",
+  "pwdlib[argon2]>=0.3,<1",
+  "python-multipart>=0.0.20,<1",
+  "sqlalchemy>=2.0.40,<3",
+  "uvicorn[standard]>=0.35,<1",
+]
+
+[project.scripts]
+slatesignal = "slatesignal.cli:main"
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<1",
+  "mypy>=1.17,<2",
+  "numpy>=2.2,<3",
+  "pip-audit>=2.9,<3",
+  "pytest>=8.4,<10",
+  "pytest-cov>=6.2,<8",
+  "ruff>=0.12,<1",
+  "xgboost>=3.0,<4",
+]
+runtime = [
+  "numpy>=2.2,<3",
+  "onnxruntime>=1.22,<2",
+  "tokenizers>=0.22,<1",
+  "xgboost>=3.0,<4",
+]
+ml = [
+  "joblib>=1.5,<2",
+  "numpy>=2.2,<3",
+  "onnx>=1.18,<2",
+  "onnxruntime>=1.22,<2",
+  "pandas>=2.2,<4",
+  "scikit-learn>=1.7,<2",
+  "torch>=2.7,<3",
+  "transformers>=5.5,<6",
+  "xgboost>=3.0,<4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = ["tests"]
+filterwarnings = [
+  "ignore:Using `httpx` with `starlette.testclient` is deprecated",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["slatesignal"]
+omit = [
+  "*/slatesignal/cli.py",
+  "*/slatesignal/pipelines/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 80
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "S"]
+ignore = ["S101"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+plugins = ["pydantic.mypy"]

@@ -1,0 +1,5303 @@
+{
+  "data_cutoff": "2026-07-25T04:19:47.618737+00:00",
+  "evaluation_kind": "retrospective_closed_holdout",
+  "forecast_type": "evaluation",
+  "generated_at": "2026-07-25T04:19:47.618737+00:00",
+  "is_ex_ante": false,
+  "methodology_note": "The model was trained through 2023 and these 2025 rows were held out, but the records were sealed retrospectively. They are model evaluation results, not reconstructed claims of publication before release.",
+  "metrics": {
+    "films": 24,
+    "interval_coverage": 0.75,
+    "log_mae": 1.621623,
+    "mae_usd": 115030680.05
+  },
+  "model_version": "bert-xgb-v1",
+  "rows": [
+    {
+      "actual_worldwide_usd": 87338.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$3,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['B-Action', 'Action', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Christian Sesma"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 24, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "1d469e25c9896d7ff1c3974825d139b9b9980686933f9ca44b694c988f5832be",
+      "release_date": "January 24, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 143188.67,
+          "p50": 1145792.25,
+          "p90": 9168552.0
+        }
+      },
+      "title": "Into the Deep"
+    },
+    {
+      "actual_worldwide_usd": 2933174.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$8,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Drama']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Bill Guttentag"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 7, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "e24939e8d558ed55cb87ecee4e866a7916e4686ce41348702c6e091b0cac27e1",
+      "release_date": "March 7, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 277616.47,
+          "p50": 3891672.25,
+          "p90": 54553972.0
+        }
+      },
+      "title": "Rule Breakers"
+    },
+    {
+      "actual_worldwide_usd": 402240065.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$180,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Action Epic', 'Adventure Epic', 'Sci-Fi Epic', 'Superhero', 'Action', 'Adventure', 'Sci-Fi']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Julius Onah"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "February 14, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "873be3333e6c33268660589201fb37c6db5180e8146108130acce21bf7f1edac",
+      "release_date": "February 14, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 10395020.0,
+          "p50": 83180112.0,
+          "p90": 665600512.0
+        }
+      },
+      "title": "Captain America: Brave New World"
+    },
+    {
+      "actual_worldwide_usd": 130234395.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$40,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Animal Adventure', 'Computer Animation', 'Superhero', 'Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Family', 'Fantasy']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Peter Hastings"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 31, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "01b4a7018b4defca9021c3320eeecef47ced011504caeb83997bd7f1c18a47e4",
+      "release_date": "January 31, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 3861295.0,
+          "p50": 27700762.0,
+          "p90": 198724016.0
+        }
+      },
+      "title": "Dog Man"
+    },
+    {
+      "actual_worldwide_usd": 51092296.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$14,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Buddy Comedy', 'Comedy']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Lawrence Lamont"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 17, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "67a283e9c41521c6e33d0fb14c4fe56e0dad7fee3540aa9b398f2eca1e6d509b",
+      "release_date": "January 17, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 599848.38,
+          "p50": 8408756.0,
+          "p90": 117874904.0
+        }
+      },
+      "title": "One of Them Days"
+    },
+    {
+      "actual_worldwide_usd": 92629251.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$250,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Fairy Tale', 'Feel-Good Romance', 'Adventure', 'Family', 'Fantasy', 'Musical', 'Romance']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Marc Webb"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 21, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "0f8903ea61c8e8f5351aabd18f64d052be7f9772205609c36d5cdf17004e449a",
+      "release_date": "March 21, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 26476856.0,
+          "p50": 211865664.0,
+          "p90": 1695331968.0
+        }
+      },
+      "title": "Snow White"
+    },
+    {
+      "actual_worldwide_usd": 110750369.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$118,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Alien Invasion', 'Dark Comedy', 'Space Sci-Fi', 'Adventure', 'Comedy', 'Fantasy', 'Sci-Fi']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Bong Joon Ho"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 7, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "f8999ea4a75afcfef39f02f2b23cde989fc44bc760f996e09195581277112299",
+      "release_date": "March 7, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 22073476.0,
+          "p50": 126383912.0,
+          "p90": 723623808.0
+        }
+      },
+      "title": "Mickey 17"
+    },
+    {
+      "actual_worldwide_usd": 61919789.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$10,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Dark Comedy', 'Splatter Horror', 'Horror']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Osgood Perkins"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "February 21, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "f7cd3c21129671486c6d529ff7ae6bd1d11e0557219de424b929710343f7dd45",
+      "release_date": "February 21, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 654848.31,
+          "p50": 9179751.0,
+          "p90": 128682808.0
+        }
+      },
+      "title": "The Monkey"
+    },
+    {
+      "actual_worldwide_usd": 57349303.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$40,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Action', 'Crime', 'Drama', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Christian Gudegast"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 10, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "14a4dfc5e7fd00796b7f986d6ceb64145b477db7f11838480f69b5b299533f03",
+      "release_date": "January 10, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 3425632.0,
+          "p50": 24575334.0,
+          "p90": 176302352.0
+        }
+      },
+      "title": "Den of Thieves: Pantera"
+    },
+    {
+      "actual_worldwide_usd": 32935391.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$18,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Dark Comedy', 'Slasher Horror', 'Splatter Horror', 'Whodunnit', 'Comedy', 'Horror', 'Mystery']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Josh Ruben"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "February 7, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "734f0a9602281857e4bf461a377253e62d04270b124bd86865f5535b3eca9eae",
+      "release_date": "February 7, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 1325417.12,
+          "p50": 18579862.0,
+          "p90": 260454624.0
+        }
+      },
+      "title": "Heart Eyes"
+    },
+    {
+      "actual_worldwide_usd": 44112532.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$26,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Action', 'Crime', 'Drama', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Mel Gibson"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 24, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "162ad5db12d2c19c8631fefe75462acf4a936dcd8235b7f4f0d390f4fb38d4e4",
+      "release_date": "January 24, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 3706450.75,
+          "p50": 26589916.0,
+          "p90": 190754864.0
+        }
+      },
+      "title": "Flight Risk"
+    },
+    {
+      "actual_worldwide_usd": 36709101.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$10,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Artificial Intelligence', 'Dark Comedy', 'Psychological Thriller', 'Sci-Fi', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Drew Hancock"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 31, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "357e47f6ce7e1c6a2370e75d2c0cc9d1811080d8aa07592cbe19d987fa199772",
+      "release_date": "January 31, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 357486.16,
+          "p50": 5011295.0,
+          "p90": 70248848.0
+        }
+      },
+      "title": "Companion"
+    },
+    {
+      "actual_worldwide_usd": 34151548.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$25,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Body Horror', 'Werewolf Horror', 'Horror']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Leigh Whannell"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 17, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "165f4d1523f6a97d6ae8e33e64265ae030a1c674bdbd89fbfd2add6785dac83c",
+      "release_date": "January 17, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 2791746.5,
+          "p50": 20027870.0,
+          "p90": 143679040.0
+        }
+      },
+      "title": "Wolf Man"
+    },
+    {
+      "actual_worldwide_usd": 22448601.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$24,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Sea Adventure', 'Drama', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Alex Parkinson"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "February 28, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "66503df97fc05530b40a7c238e0109ef6283884a0c656720e76ef94731fb360a",
+      "release_date": "February 28, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 3141918.0,
+          "p50": 22539984.0,
+          "p90": 161700832.0
+        }
+      },
+      "title": "Last Breath"
+    },
+    {
+      "actual_worldwide_usd": 1894228898.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$80,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Computer Animation', 'Fantasy Epic', 'Martial Arts', 'Supernatural Fantasy', 'Action', 'Adventure', 'Animation', 'Drama', 'Fantasy']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Yu Yang"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 29, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "1595356b7afb49532a13dda0c6ecc9f3dab95a4648bbcee8c97ff96353743555",
+      "release_date": "January 29, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 8957000.0,
+          "p50": 51284208.0,
+          "p90": 293632896.0
+        }
+      },
+      "title": "Ne Zha 2"
+    },
+    {
+      "actual_worldwide_usd": 21969464.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$18,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Dark Comedy', 'One-Person Army Action', 'Superhero', 'Action', 'Comedy', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Dan Berk"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 14, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "a13963b1436f0e3c3420db0f70be537347225b523d24944900ac699419d42a42",
+      "release_date": "March 14, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 714805.25,
+          "p50": 10020235.0,
+          "p90": 140464800.0
+        }
+      },
+      "title": "Novocaine"
+    },
+    {
+      "actual_worldwide_usd": 25041020.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$50,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Spy', 'Drama', 'Romance', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Steven Soderbergh"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 14, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "ecd26a74957e4d75f071eb688008d1ee5b1f57cd3ecbf08d94df4c4d83c6498f",
+      "release_date": "March 14, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 6051253.0,
+          "p50": 43411420.0,
+          "p90": 311431584.0
+        }
+      },
+      "title": "Black Bag"
+    },
+    {
+      "actual_worldwide_usd": 17407093.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$18,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Martial Arts', 'Action', 'Comedy']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Jonathan Eusebio"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "February 7, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "86714be52473c19950f4ca12e54a93ebde5dd5d89d2a99f06513f593c5f7a0dd",
+      "release_date": "February 7, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 543469.38,
+          "p50": 7618428.5,
+          "p90": 106796008.0
+        }
+      },
+      "title": "Love Hurts"
+    },
+    {
+      "actual_worldwide_usd": 5853214.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$45,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Docudrama', 'Gangster', 'Period Drama', 'True Crime', 'Biography', 'Crime', 'Drama', 'History']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Barry Levinson"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 21, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "263476f411be35eb3c1f536a529e96ab84e605ba3e868ac0ed869b61b768ab0b",
+      "release_date": "March 21, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 4165884.0,
+          "p50": 29885868.0,
+          "p90": 214399872.0
+        }
+      },
+      "title": "The Alto Knights"
+    },
+    {
+      "actual_worldwide_usd": 4576783.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$55,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Dark Fantasy', 'Supernatural Fantasy', 'Survival', 'Action', 'Adventure', 'Fantasy']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Paul W.S. Anderson"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 7, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "c3ded0dad8a34e9acb6aa4aa3d10a9b2492b36f1442e27f6c85c4544454f2457",
+      "release_date": "March 7, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 8485155.0,
+          "p50": 60872124.0,
+          "p90": 436693856.0
+        }
+      },
+      "title": "In the Lost Lands"
+    },
+    {
+      "actual_worldwide_usd": 1922230.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$10,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Psychological Drama', 'Drama']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Mark Anthony Green"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 14, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "398beaa48d3d7e135f1a8084260d83965f2b82b77defb519c1ccbf21f7cc53de",
+      "release_date": "March 14, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 339005.06,
+          "p50": 4752224.5,
+          "p90": 66617172.0
+        }
+      },
+      "title": "Opus"
+    },
+    {
+      "actual_worldwide_usd": 406786.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$15,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Biography', 'Crime', 'Drama', 'Thriller', 'War']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Patryk Vega"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 10, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "9241aae2161e40059023b97ecb770107fa425bfa9cf954fac25bc86acd154dc4",
+      "release_date": "January 10, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 1008670.19,
+          "p50": 14139667.0,
+          "p90": 198211472.0
+        }
+      },
+      "title": "Putin"
+    },
+    {
+      "actual_worldwide_usd": 13472.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$5,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Dark Comedy', 'Psychological Horror', 'Psychological Thriller', 'Comedy', 'Horror', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Jimmy Warden"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "March 14, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "677501792e117eb9bf045aa295f25ecc672b9bca76b5f2c61ccc0b6a4be835c0",
+      "release_date": "March 14, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 147049.86,
+          "p50": 2061374.75,
+          "p90": 28896572.0
+        }
+      },
+      "title": "Borderline"
+    },
+    {
+      "actual_worldwide_usd": 189036.0,
+      "factors": [
+        {
+          "direction": "neutral",
+          "evidence": "Modeled directly by bert-xgb-v1.",
+          "group": "Story",
+          "impact": null,
+          "key": "synopsis_embedding",
+          "label": "Synopsis embedding",
+          "source_count": 1,
+          "value": "768-dimensional mean-pooled BERT vector"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Log production budget is an original structured feature.",
+          "group": "Package",
+          "impact": null,
+          "key": "budget",
+          "label": "Production budget",
+          "source_count": 1,
+          "value": "$20,000,000 reported in the research corpus"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Primary genre is one-hot encoded in the original model.",
+          "group": "Story",
+          "impact": null,
+          "key": "genre",
+          "label": "Genre-market history",
+          "source_count": 1,
+          "value": "['Action', 'Crime', 'Thriller']"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "franchise_ip",
+          "label": "Franchise / IP",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Three director track-record features use the pre-2024 training set.",
+          "group": "People",
+          "impact": null,
+          "key": "director_history",
+          "label": "Director history",
+          "source_count": 1,
+          "value": "Michael Polish"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "cast_history",
+          "label": "Cast history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "studio_history",
+          "label": "Studio history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "People",
+          "impact": null,
+          "key": "producer_writer_history",
+          "label": "Producer / writer history",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "neutral",
+          "evidence": "Release timing is displayed but only decade is encoded by this baseline.",
+          "group": "Release",
+          "impact": null,
+          "key": "release_month",
+          "label": "Release month",
+          "source_count": 1,
+          "value": "January 16, 2025"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "holiday_window",
+          "label": "Holiday window",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Release",
+          "impact": null,
+          "key": "nearby_competition",
+          "label": "Nearby competition",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "runtime",
+          "label": "Runtime",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Package",
+          "impact": null,
+          "key": "certification",
+          "label": "Certification",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "distribution_scale",
+          "label": "Distribution scale",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Distribution",
+          "impact": null,
+          "key": "premium_formats",
+          "label": "Premium formats",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Market",
+          "impact": null,
+          "key": "origin_language",
+          "label": "Origin / language",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "google_momentum",
+          "label": "Google search momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "wikipedia_attention",
+          "label": "Wikipedia attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "trailer_momentum",
+          "label": "Trailer momentum",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        },
+        {
+          "direction": "unknown",
+          "evidence": "Not scored by bert-xgb-v1.",
+          "group": "Demand",
+          "impact": null,
+          "key": "news_reddit_attention",
+          "label": "News / Reddit attention",
+          "source_count": 0,
+          "value": "Unavailable in the original research split"
+        }
+      ],
+      "feature_vector_sha256": "0b41bd4fa557790f70f21cbc33a276ab4134af97711b18923e9be9e9e5b410dd",
+      "release_date": "January 16, 2025",
+      "release_year": 2025,
+      "targets": {
+        "domestic_opening": null,
+        "domestic_total": null,
+        "international_total": null,
+        "worldwide_total": {
+          "currency": "USD",
+          "p10": 2016257.5,
+          "p50": 14464547.0,
+          "p90": 103768008.0
+        }
+      },
+      "title": "Alarum"
+    }
+  ],
+  "schema_version": 1,
+  "source_checksums": {
+    "holdout_csv": "6a0b3998bde9144b77efabec3ad27427572da28ed182448c8bb14f2ef716ed6d",
+    "holdout_embeddings": "b32523042ab4bd71402a609ee0cab424cc117c41d594a8bae378e9b5c0f0f1c9",
+    "model_artifact": "78f0c61c19869d23e2fd883229f75d8f5ed7936471b11e646f55d78bf76fb598"
+  }
+}

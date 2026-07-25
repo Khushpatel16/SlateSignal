@@ -1,0 +1,75 @@
+{
+  "candidate_search": [
+    {
+      "internal_log_mae": 1.369727,
+      "learning_rate": 0.025,
+      "max_depth": 4,
+      "min_child_weight": 4,
+      "rounds": 118
+    },
+    {
+      "internal_log_mae": 1.391421,
+      "learning_rate": 0.025,
+      "max_depth": 5,
+      "min_child_weight": 6,
+      "rounds": 87
+    },
+    {
+      "internal_log_mae": 1.361737,
+      "learning_rate": 0.04,
+      "max_depth": 4,
+      "min_child_weight": 8,
+      "rounds": 74
+    },
+    {
+      "internal_log_mae": 1.377789,
+      "learning_rate": 0.02,
+      "max_depth": 6,
+      "min_child_weight": 8,
+      "rounds": 223
+    }
+  ],
+  "conformal_holdout_coverage": 0.666667,
+  "dataset": {
+    "films": 6437,
+    "holdout_2025": 24,
+    "training": 6292,
+    "validation_2024": 121
+  },
+  "generated_at": "2026-07-25T04:00:22.467398+00:00",
+  "periods": {
+    "2024_validation": {
+      "corrected": {
+        "log_mae": 1.342213,
+        "mae_usd": 104217968.44,
+        "r2": 0.283388
+      },
+      "original": {
+        "log_mae": 1.437478,
+        "mae_usd": 111148192.12,
+        "r2": 0.1534
+      }
+    },
+    "2025_closed_holdout": {
+      "corrected": {
+        "log_mae": 1.428473,
+        "mae_usd": 112402459.18,
+        "r2": 0.009198
+      },
+      "films": 24,
+      "interval_coverage": 0.666667,
+      "original": {
+        "log_mae": 1.621623,
+        "mae_usd": 115030680.05,
+        "r2": -0.034616
+      }
+    }
+  },
+  "promoted": false,
+  "promotion_gates": {
+    "audited_group_error_not_worse": false,
+    "coverage_between_75_and_85_percent": false,
+    "dollar_mae_within_5_percent": true,
+    "improves_temporal_log_mae": true
+  }
+}

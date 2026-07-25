@@ -1,0 +1,90 @@
+{
+  "feature_matrix_sha256": "f96a9322c6043cfc409f2476869d6fd21650b7f3c28c093c5f909dfd7005a028",
+  "model_sha256": "78f0c61c19869d23e2fd883229f75d8f5ed7936471b11e646f55d78bf76fb598",
+  "rows": [
+    {
+      "feature_sha256": "f2744036b2551787843bc90419f2f2dd21e3426995ca013596ee5db5c249dc7b",
+      "prediction_log": 11.79198933,
+      "prediction_usd": 132188.17,
+      "title": "Dark Feathers: Dance of the Geisha",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "fbbf45c2857a00496f7e4c445fd5398ed32d38fcfab7301c564b0171f4b18229",
+      "prediction_log": 15.27774048,
+      "prediction_usd": 4315571.0,
+      "title": "The Assessment",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "edc567e976b9900188c0b1eeda82aa67f99383ee676d80a2af8b8f1e8f24157b",
+      "prediction_log": 15.75276279,
+      "prediction_usd": 6939655.0,
+      "title": "Ryan's World the Movie: Titan Universe Adventure",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "e971b009f3b201074425f1d365cd03bed7a8942068b7e6a77125c3a118157d6e",
+      "prediction_log": 13.21346092,
+      "prediction_usd": 547686.94,
+      "title": "The Ark and the Darkness",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "80ae4d5152ec7e49b65d1ef88aebb24b7866b55f8c6dceb247e733121ae1dba6",
+      "prediction_log": 11.44561195,
+      "prediction_usd": 93489.2,
+      "title": "Kajolrekha",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "a16b57c0d1699cabad012b340f4ee83d9bef4f15fbb8910187d7a840e4769ba7",
+      "prediction_log": 14.29754066,
+      "prediction_usd": 1619357.5,
+      "title": "Jesus",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "9738d303f78247475d508d39df0968e977da2eb393a73992d9d8eb41e77403da",
+      "prediction_log": 12.28647518,
+      "prediction_usd": 216743.64,
+      "title": "DIG! XX",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "5d47e8e68008dbb43d0e6f5fdc65d932c20bd9b7dac0613e29ca719cbf9b6cda",
+      "prediction_log": 10.8020153,
+      "prediction_usd": 49118.69,
+      "title": "Mind Body & Soul",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "adcc78a2570b8ff28a4aa8982ff27c6bce8c15c3003099e2e268b91e9b174318",
+      "prediction_log": 18.82971764,
+      "prediction_usd": 150536720.0,
+      "title": "Inside Out 2",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "4106bbd86439e93cd4128b40d89f8a597148eddecba20e071616db286e270ad4",
+      "prediction_log": 18.93481445,
+      "prediction_usd": 167218928.0,
+      "title": "Deadpool & Wolverine",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "25892db9971c9e7487962d310c041c3a9cdd5d7b6b69492de95a170c7ec81bad",
+      "prediction_log": 19.1689415,
+      "prediction_usd": 211332128.0,
+      "title": "Wicked",
+      "year": 2024
+    },
+    {
+      "feature_sha256": "c88e066c73bfb0c77114f42b7fb4d192de816c2cc4447e4c8da9f68be69d15bb",
+      "prediction_log": 19.02595711,
+      "prediction_usd": 183175840.0,
+      "title": "Moana 2",
+      "year": 2024
+    }
+  ]
+}

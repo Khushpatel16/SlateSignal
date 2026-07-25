@@ -1,0 +1,70 @@
+{
+  "conformal_log_radius": {
+    "blockbuster": 2.07968239,
+    "global": 2.07968239,
+    "high": 1.74494832,
+    "low": 2.64035045,
+    "micro": 2.07968239,
+    "mid": 1.97045657
+  },
+  "director_history_fallback_revenue": 33218947.5,
+  "display_name": "Original BERT + XGBoost research baseline",
+  "encoder": {
+    "hidden_size": 768,
+    "max_length": 512,
+    "name": "bert-base-uncased",
+    "pooling": "attention-mask-aware mean pooling"
+  },
+  "feature_count": 783,
+  "limitations": [
+    "Original training rows were selected by post-release popularity and are not a census.",
+    "Nominal historical dollars were not inflation-normalized in this baseline.",
+    "Training-time structured rows and embeddings require a corrected successor audit.",
+    "Only worldwide gross is supported; secondary targets remain unavailable.",
+    "Buzz is not an input to this baseline and no hand-authored social multiplier is used."
+  ],
+  "metrics": {
+    "interval_empirical_coverage": 0.793388,
+    "interval_nominal_coverage": 0.8,
+    "log_mae": 1.437478,
+    "mae_usd": 111148192.12,
+    "r2": 0.1534,
+    "rows": 121,
+    "validation_period": "2024"
+  },
+  "model_kind": "bert_mean_pool_xgboost",
+  "model_sha256": "78f0c61c19869d23e2fd883229f75d8f5ed7936471b11e646f55d78bf76fb598",
+  "research_reported_metrics": {
+    "bert_xgboost_mae_usd": 115030000,
+    "bert_xgboost_r2": 0.382,
+    "structured_baseline_mae_usd": 141210000,
+    "tfidf_xgboost_mae_usd": 128990000
+  },
+  "schema_version": 1,
+  "source_checksums": {
+    "train_csv": "e61883d6dc42be56464834b46c3a6803e96f421eae3902f38bc6c1c8ff5c1d81",
+    "train_embeddings": "5e512a25655a2003008d637a7b9974bf7fb2d743cfbd1401cbc4892e27bbe1ab",
+    "validation_csv": "6d1c6dc2ad635e58012d0dc91ef9057195e410724ea46202a82ac6d697232200",
+    "validation_embeddings": "354e35bd674f5a41db4a646cde5731a33cf50f7754dfca66f2911595f07ae5ff"
+  },
+  "structured_features": [
+    "log_budget",
+    "decade",
+    "director_avg_revenue_log",
+    "director_num_films",
+    "director_max_revenue_log",
+    "genre_Action",
+    "genre_Animation",
+    "genre_Comedy",
+    "genre_Drama",
+    "genre_Fantasy",
+    "genre_Horror",
+    "genre_Other",
+    "genre_Romance",
+    "genre_SciFi",
+    "genre_Thriller"
+  ],
+  "target": "log1p_worldwide_gross_usd",
+  "training_cutoff": "2023-12-31",
+  "version": "bert-xgb-v1"
+}
