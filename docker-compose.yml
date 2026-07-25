@@ -1,0 +1,53 @@
+services:
+  database:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: slatesignal
+      POSTGRES_USER: slatesignal
+      POSTGRES_PASSWORD: local-development-only
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U slatesignal"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - slatesignal-postgres:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ./services/inference
+    environment:
+      DATABASE_URL: postgresql+psycopg://slatesignal:local-development-only@database:5432/slatesignal
+      WEB_ORIGIN: http://localhost:3000
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@example.com}
+      ADMIN_BOOTSTRAP_TOKEN: ${ADMIN_BOOTSTRAP_TOKEN:-}
+      TMDB_API_TOKEN: ${TMDB_API_TOKEN:-}
+      YOUTUBE_API_KEY: ${YOUTUBE_API_KEY:-}
+      REDDIT_CLIENT_ID: ${REDDIT_CLIENT_ID:-}
+      REDDIT_CLIENT_SECRET: ${REDDIT_CLIENT_SECRET:-}
+      REDDIT_USER_AGENT: ${REDDIT_USER_AGENT:-SlateSignal/0.2 local}
+      BERT_ONNX_PATH: /models/bert-base-uncased-fp16.onnx
+      COOKIE_SECURE: "false"
+      AUTO_CREATE_SCHEMA: "false"
+    volumes:
+      - ./services/inference/artifacts/bert-base-uncased-fp16.onnx:/models/bert-base-uncased-fp16.onnx:ro
+    ports:
+      - "8000:8000"
+    depends_on:
+      database:
+        condition: service_healthy
+
+  web:
+    build:
+      context: ./apps/web
+      args:
+        INFERENCE_API_URL: http://api:8000
+    environment:
+      INFERENCE_API_URL: http://api:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  slatesignal-postgres:

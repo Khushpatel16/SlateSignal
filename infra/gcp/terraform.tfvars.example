@@ -1,0 +1,5 @@
+project_id  = "your-gcp-project"
+region      = "us-west1"
+api_image   = "us-west1-docker.pkg.dev/your-gcp-project/slatesignal/api:git-sha"
+web_origin  = "https://your-project.vercel.app"
+admin_email = "you@example.com"

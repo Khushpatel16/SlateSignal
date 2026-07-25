@@ -1,0 +1,31 @@
+name: slatesignal-api
+region: sfo
+services:
+  - name: api
+    dockerfile_path: Dockerfile
+    github:
+      repo: replace-with-owner/slatesignal
+      branch: main
+      deploy_on_push: true
+    source_dir: services/inference
+    http_port: 8000
+    health_check:
+      http_path: /v1/health
+    instance_count: 1
+    instance_size_slug: basic-xs
+    envs:
+      - key: DATABASE_URL
+        scope: RUN_TIME
+        type: SECRET
+      - key: TMDB_API_TOKEN
+        scope: RUN_TIME
+        type: SECRET
+      - key: WEB_ORIGIN
+        scope: RUN_TIME
+        value: https://replace-with-web-origin
+      - key: COOKIE_SECURE
+        scope: RUN_TIME
+        value: "true"
+      - key: AUTO_CREATE_SCHEMA
+        scope: RUN_TIME
+        value: "false"

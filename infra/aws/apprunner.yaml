@@ -1,0 +1,19 @@
+version: 1.0
+runtime: python313
+build:
+  commands:
+    build:
+      - pip install -e "services/inference[runtime]"
+run:
+  runtime-version: 3.13
+  command: >-
+    cd services/inference &&
+    alembic upgrade head &&
+    uvicorn slatesignal.main:app --host 0.0.0.0 --port 8000
+  network:
+    port: 8000
+  env:
+    - name: AUTO_CREATE_SCHEMA
+      value: "false"
+    - name: COOKIE_SECURE
+      value: "true"
