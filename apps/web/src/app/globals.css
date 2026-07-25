@@ -1,0 +1,134 @@
+@import "@fontsource-variable/manrope";
+@import "@fontsource-variable/newsreader";
+@import "tailwindcss";
+
+:root {
+  --canvas: #0c0c0d;
+  --canvas-raised: #111113;
+  --surface: #171719;
+  --surface-strong: #1e1e21;
+  --surface-soft: #242428;
+  --line: #303034;
+  --line-soft: #252529;
+  --ink: #f4f2ec;
+  --ink-strong: #ffffff;
+  --muted: #a5a39c;
+  --muted-strong: #c9c6bd;
+  --signal: #f0c94c;
+  --signal-strong: #ffdb66;
+  --positive: #68c6a3;
+  --negative: #ef746b;
+  --info: #78aee8;
+  --warning: #e9a85d;
+  --sidebar: 248px;
+  --topbar: 64px;
+}
+
+@theme inline {
+  --color-background: var(--canvas);
+  --color-foreground: var(--ink);
+  --font-sans: "Manrope Variable", "Helvetica Neue", Arial, sans-serif;
+  --font-editorial: "Newsreader Variable", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--line);
+  letter-spacing: 0;
+}
+
+html {
+  background: var(--canvas);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: "Manrope Variable", "Helvetica Neue", Arial, sans-serif;
+  font-variation-settings: "wght" 480;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--signal);
+  color: #111;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3f;
+  border: 2px solid var(--canvas);
+  border-radius: 8px;
+}
+
+.font-editorial {
+  font-family: "Newsreader Variable", Georgia, serif;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.surface-grid {
+  background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.hairline-top {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.scrim {
+  background: rgba(8, 8, 9, 0.76);
+  backdrop-filter: blur(14px);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
