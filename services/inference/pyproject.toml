@@ -29,7 +29,7 @@ slatesignal = "slatesignal.cli:main"
 [project.optional-dependencies]
 dev = [
   "httpx>=0.28,<1",
-  "mypy>=1.17,<2",
+  "mypy>=1.17,<3",
   "numpy>=2.2,<3",
   "pip-audit>=2.9,<3",
   "pytest>=8.4,<10",
