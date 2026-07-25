@@ -90,3 +90,17 @@ ignore = ["S101"]
 python_version = "3.13"
 strict = true
 plugins = ["pydantic.mypy"]
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = [
+  "tokenizers",
+  "tokenizers.*",
+  "onnxruntime",
+  "onnxruntime.*",
+  "torch",
+  "torch.*",
+  "transformers",
+  "transformers.*",
+]
+ignore_missing_imports = true

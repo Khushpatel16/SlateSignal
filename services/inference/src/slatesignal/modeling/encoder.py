@@ -38,7 +38,7 @@ class BertMeanPoolEncoder:
     def _load_tokenizer(self) -> Any:
         if self._tokenizer is None:
             if self.onnx_path.exists():
-                from tokenizers import Tokenizer  # type: ignore[import-untyped]
+                from tokenizers import Tokenizer
 
                 tokenizer_file = (
                     self.tokenizer_path / "tokenizer.json"
@@ -57,7 +57,7 @@ class BertMeanPoolEncoder:
                 )
                 self._tokenizer = tokenizer
             else:
-                from transformers import AutoTokenizer  # type: ignore[import-not-found]
+                from transformers import AutoTokenizer
 
                 source = self.tokenizer_path if self.tokenizer_path.exists() else self.model_name
                 self._tokenizer = AutoTokenizer.from_pretrained(source)
@@ -65,7 +65,7 @@ class BertMeanPoolEncoder:
 
     def _encode_onnx(self, text: str) -> np.ndarray:
         if self._session is None:
-            import onnxruntime as ort  # type: ignore[import-untyped]
+            import onnxruntime as ort
 
             self._session = ort.InferenceSession(
                 str(self.onnx_path),
